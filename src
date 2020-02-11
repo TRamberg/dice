@@ -1,0 +1,23 @@
+float number = 0;
+int diceNumber = 0;
+
+
+void setup() {
+  size(200, 200);
+}
+void draw() {
+  textSize(15);
+  fill (255);
+  text("Press to roll the dice", width*0.2,height*0.15);
+  if (mousePressed) {
+    number = random(1, 6);
+    diceNumber = int (number);
+    noStroke();
+    fill (255);
+    rect(width*0.3, height*0.25, width*0.45, height*0.45);
+    textSize(20);
+    delay (1000);
+    fill (255, 165, 165);
+    text (diceNumber, width/2, height/2);
+  }
+}
